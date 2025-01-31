@@ -12,6 +12,6 @@ beq exit
 strb r5, [r0], #1 @store character to destination string
 b copy
 exit:
-strb r6, [r0] #add a null character at the end of string
-mov r0, r5 #return destination string pointer
+strb r6, [r0] @add a null character at the end of string
+mov r0, r5 @return destination string pointer
 bx lr
