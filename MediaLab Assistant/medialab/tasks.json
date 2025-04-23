@@ -1,0 +1,42 @@
+[
+  {
+    "description": "Make a JavaFX Application",
+    "title": "JavaFX Application",
+    "category": "University",
+    "priority": "High",
+    "deadline": "2025-02-26",
+    "status": "Delayed"
+  },
+  {
+    "description": "Buy offers and toilet paper",
+    "title": "Sklavenitis",
+    "category": "Groceries",
+    "priority": "High",
+    "deadline": "2025-02-28",
+    "status": "Delayed"
+  },
+  {
+    "description": "Get coffee with my girlfriend at Exarchia",
+    "title": "Coffee",
+    "category": "Dating",
+    "priority": "Low",
+    "deadline": "2025-03-08",
+    "status": "Delayed"
+  },
+  {
+    "description": "Get my teeth professionally cleaned",
+    "title": "Dentist",
+    "category": "Medical",
+    "priority": "High",
+    "deadline": "2025-04-05",
+    "status": "Open"
+  },
+  {
+    "description": "Ζαρζαβατικά",
+    "title": "Λαική",
+    "category": "Groceries",
+    "priority": "Low",
+    "deadline": "2025-03-08",
+    "status": "Delayed"
+  }
+]

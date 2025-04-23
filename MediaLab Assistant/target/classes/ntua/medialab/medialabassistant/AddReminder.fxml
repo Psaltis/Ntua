@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="292.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntua.medialab.medialabassistant.AddReminderController">
+   <children>
+      <Label text="Add Reminder">
+         <VBox.margin>
+            <Insets bottom="30.0" top="-20.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Select Task" />
+      <ChoiceBox fx:id="tasklist" prefWidth="150.0" />
+      <CheckBox fx:id="dayreminder" mnemonicParsing="false" onAction="#handleDayReminder" text="Day before Deadline" />
+      <CheckBox fx:id="weekreminder" mnemonicParsing="false" onAction="#handleWeekReminder" text="Week before Deadline" />
+      <CheckBox fx:id="monthreminder" mnemonicParsing="false" onAction="#handleMonthReminder" text="Month before Deadline" />
+      <HBox prefHeight="100.0" prefWidth="416.0" spacing="10.0">
+         <children>
+            <CheckBox fx:id="customreminder" mnemonicParsing="false" onAction="#handleCustomReminder" text="Custom:" />
+            <DatePicker fx:id="datepicker" />
+         </children>
+      </HBox>
+      <Button fx:id="addremindersbutton" mnemonicParsing="false" onAction="#handleAddReminder" text="Add Reminders" />
+      <Button fx:id="closebutton" mnemonicParsing="false" onAction="#handleClose" text="Close" />
+   </children>
+   <padding>
+      <Insets left="20.0" />
+   </padding>
+</VBox>

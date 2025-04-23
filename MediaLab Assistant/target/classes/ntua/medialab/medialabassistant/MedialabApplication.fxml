@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="519.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntua.medialab.medialabassistant.MedialabApplicationController">
+    <top>
+        <VBox prefHeight="48.0" prefWidth="766.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox spacing="10">
+                    <children>
+                        <Label fx:id="totalTasksLabel" text="Total Tasks: " />
+                        <Label fx:id="TotalTaks" text="Label" />
+                        <Label fx:id="completedTasksLabel" text="Completed: " />
+                        <Label fx:id="CompletedTasks" text="Label" />
+                        <Label fx:id="delayedTasksLabel" text="Delayed: " />
+                        <Label fx:id="DelayedTasks" text="Label" />
+                        <Label text="Due in one week: " />
+                        <Label fx:id="DueWeekTasks" text="Label" />
+                    </children>
+                </HBox>
+                <TextField fx:id="searchbar" onAction="#handleSearch" />
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="139.0" prefWidth="746.0" spacing="10" BorderPane.alignment="CENTER">
+            <Button fx:id="addTasksButton" onAction="#handleAddTask" text="Add Task" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0">
+                <children>
+                    <Button fx:id="addCategoriesButton" onAction="#handleAddCategories" text="Add Category" />
+                    <Button fx:id="editCatBut" onAction="#handleEditCat" text="Edit Category" />
+                </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0">
+                <children>
+                    <Button fx:id="addPriorBut" onAction="#handleAddPriority" text="Add Priority" />
+                    <Button fx:id="editPriorBut" onAction="#handleEditPrior" text="Edit Priority" />
+                </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="80.0">
+                <children>
+                    <Button fx:id="addReminderButton" onAction="#handleAddReminder" text="Add Reminder" />
+                </children>
+            </VBox>
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+   <right>
+        <VBox alignment="TOP_CENTER" prefHeight="332.0" prefWidth="287.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" text="Reminders" />
+                <ScrollPane fx:id="reminderScrollPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" VBox.vgrow="ALWAYS">
+                    <content>
+                        <VBox fx:id="reminderVBox" alignment="TOP_CENTER" />
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+   </right>
+   <center>
+      <VBox prefHeight="332.0" prefWidth="506.0" BorderPane.alignment="CENTER">
+         <children>
+              <ScrollPane fx:id="taskScrollPane" fitToWidth="true" prefHeight="332.0" prefWidth="436.0" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+                  <content>
+                      <VBox fx:id="taskVBox" alignment="TOP_CENTER" />
+                  </content>
+              </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
